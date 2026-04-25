@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SITE_DATA } from "../data/siteData";
 import { motion } from "framer-motion";
 
@@ -34,7 +34,6 @@ export const CTA = () => {
                 rel="noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center gap-3 bg-black text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-black text-base sm:text-lg transition-all hover:scale-105 shadow-2xl active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
                 CONTÁCTANOS POR WHATSAPP
               </a>
               <a

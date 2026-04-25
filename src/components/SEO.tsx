@@ -50,7 +50,20 @@ export const SEO = () => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://laufitness.fit" />
       <meta property="og:image" content="/logolaufitness.png" />
-      
+      <meta property="og:locale" content="es_PE" />
+      <meta property="og:site_name" content="Lau Fitness" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Lau Fitness | Domina tu Cuerpo" />
+      <meta name="twitter:description" content="Gimnasio premium en Los Olivos con tecnología de punta y coaches certificados." />
+      <meta name="twitter:image" content="/logolaufitness.png" />
+
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="author" content="Lau Fitness" />
+      <meta name="theme-color" content="#D60000" />
+
       {/* JSON-LD Schema */}
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}

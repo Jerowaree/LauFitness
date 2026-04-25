@@ -14,7 +14,7 @@ export const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -85,7 +85,7 @@ export const Navbar = () => {
               className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors hover:text-brand-red ${
                 (link.isPage && location.pathname === link.href) || (!link.isPage && location.pathname === "/") 
                 ? "text-white" 
-                : "text-white/50"
+                : "text-white"
               }`}
             >
               {link.name}

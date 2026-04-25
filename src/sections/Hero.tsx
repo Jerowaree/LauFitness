@@ -11,6 +11,9 @@ export const Hero = () => {
           src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
           alt="Lau Fitness Training"
           className="w-full h-full object-cover opacity-60"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Overlays for Depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent" />
