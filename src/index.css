@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #D60000;
+  --color-brand-black: #0A0A0A;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-medium: #2A2A2A;
+  --color-brand-light: #EAEAEA;
+  
+  --color-border: #262626;
+  
+  --font-logo: "Bebas Neue", sans-serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  * {
+    @apply border-brand-medium/20;
+  }
+  body {
+    @apply bg-brand-black text-white font-sans antialiased selection:bg-brand-red selection:text-white;
+    background-color: #0A0A0A;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-normal tracking-[0.2em] leading-tight;
+  }
+}
+
+.glass {
+  @apply bg-brand-black/80 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60;
+}
+
+.red-gradient {
+  @apply bg-gradient-to-br from-brand-red to-red-800;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brand-black;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-medium rounded-full hover:bg-brand-red transition-colors;
+}
+
+/* Fix for overlapping images/layout issues */
+section {
+  @apply relative overflow-hidden;
+}
+
+.container {
+  @apply mx-auto px-6 max-w-7xl;
+}
