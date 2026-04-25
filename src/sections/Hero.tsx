@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SITE_DATA } from "../data/siteData";
 
 export const Hero = () => {
@@ -62,10 +63,13 @@ export const Hero = () => {
               {SITE_DATA.hero.cta}
               <ChevronRight className="w-6 h-6" />
             </a>
-            <button className="w-full sm:w-auto px-12 py-5 bg-white/5 hover:bg-white/10 text-white font-bold text-xl rounded-2xl transition-all border border-white/10 flex items-center justify-center gap-3 backdrop-blur-xl group">
-              VER TOUR VIRTUAL
+            <Link
+              to="/contacto"
+              className="w-full sm:w-auto px-12 py-5 bg-white/5 hover:bg-white/10 text-white font-bold text-xl rounded-2xl transition-all border border-white/10 flex items-center justify-center gap-3 backdrop-blur-xl group"
+            >
+              CONTACTARSE
               <Play className="w-5 h-5 fill-current group-hover:scale-125 transition-transform" />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
