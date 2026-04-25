@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Users, Dumbbell, Apple, Zap } from "lucide-react";
+import { Users, Dumbbell, Apple, Zap, type LucideIcon } from "lucide-react";
 import { SITE_DATA } from "../data/siteData";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Users: Users,
   Dumbbell: Dumbbell,
   Apple: Apple,
@@ -44,7 +44,7 @@ export const Benefits = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {SITE_DATA.benefits.map((benefit, i) => {
-              const Icon = iconMap[benefit.icon];
+              const Icon = iconMap[benefit.icon] ?? Users;
               return (
                 <motion.div
                   key={i}

@@ -6,8 +6,8 @@ export const SEO = () => {
     "@type": "Gym",
     "name": "Lau Fitness",
     "image": "/logolaufitness.png",
-    "@id": "",
-    "url": "https://laufitness.pe",
+    "@id": "https://laufitness.fit/#gym",
+    "url": "https://laufitness.fit",
     "telephone": "+51974775549",
     "address": {
       "@type": "PostalAddress",
@@ -42,12 +42,13 @@ export const SEO = () => {
       <title>Lau Fitness | El Mejor Gimnasio en Los Olivos, Lima Norte</title>
       <meta name="description" content="Entrena en Lau Fitness, el gimnasio premium de Los Olivos. Musculación, entrenamiento funcional y nutrición personalizada. ¡Transforma tu cuerpo hoy!" />
       <meta name="keywords" content="gimnasio en los olivos, gym los olivos, entrenamiento personal los olivos, gimnasio lima norte, lau fitness" />
-      
+      <link rel="canonical" href="https://laufitness.fit" />
+
       {/* Open Graph */}
       <meta property="og:title" content="Lau Fitness | Domina tu Cuerpo" />
       <meta property="og:description" content="Gimnasio premium en Los Olivos con tecnología de punta y coaches certificados." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://laufitness.pe" />
+      <meta property="og:url" content="https://laufitness.fit" />
       <meta property="og:image" content="/logolaufitness.png" />
       
       {/* JSON-LD Schema */}

@@ -10,12 +10,12 @@ export const Hero = () => {
         <img
           src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
           alt="Lau Fitness Training"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-60"
         />
         {/* Overlays for Depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-transparent to-brand-black/40" />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-transparent to-brand-black/30" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
       {/* Content Layer */}
@@ -68,7 +68,7 @@ export const Hero = () => {
       </div>
 
       {/* Decorative Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-black to-transparent z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-black to-transparent z-20" />
     </section>
   );
 };

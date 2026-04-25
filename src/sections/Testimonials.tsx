@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, User } from "lucide-react";
 import { SITE_DATA } from "../data/siteData";
 
 export const Testimonials = () => {
@@ -34,11 +34,9 @@ export const Testimonials = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-red/20"
-                />
+                <div className="w-12 h-12 rounded-full bg-white/10 border-2 border-brand-red/20 flex items-center justify-center">
+                  <User className="w-6 h-6 text-white/70" aria-hidden="true" />
+                </div>
                 <div>
                   <h4 className="font-bold text-white">{testimonial.name}</h4>
                   <p className="text-sm text-white/50">{testimonial.role}</p>

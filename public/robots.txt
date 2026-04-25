@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://laufitness.pe/sitemap.xml
+Sitemap: https://laufitness.fit/sitemap.xml

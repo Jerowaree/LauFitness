@@ -64,7 +64,7 @@ export const SITE_DATA = {
       name: "Mensual",
       price: "S/ 120",
       period: "1 mes",
-      features: ["Acceso total a máquinas", "Evaluación física inicial", "App de entrenamiento", "Lockers"],
+      features: ["Acceso total a máquinas", "Evaluación física inicial", "Evaluación nutricional inicial", "Lockers"],
       recommended: false
     },
     {
@@ -78,21 +78,21 @@ export const SITE_DATA = {
       name: "Anual",
       price: "S/ 750",
       period: "12 meses",
-      features: ["Todo lo del plan Trimestral", "Mejor precio garantizado", "Asesoría nutricional mensual", "Congelamiento (30 días)", "Polo de regalo"],
+      features: ["Todo lo del plan Trimestral", "Mejor precio garantizado", "Asesoría nutricional mensual", "Congelamiento (30 días)", "Acceso a Merchandising"],
       recommended: false
     }
   ],
   testimonials: [
     {
-      name: "Carlos Mendoza",
+      name: "Jonathan Rivas",
       role: "Atleta de Musculación",
-      content: "Lau Fitness cambió mi mentalidad. No es solo un gimnasio, es un templo de disciplina. El mejor en Los Olivos.",
+      content: "Inicie mis rutinas la semana pasada ambiente amplio, máquinas para todos los gustos, el entrenador de la mañana es top, un éxito.",
       avatar: "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?q=80&w=1974&auto=format&fit=crop"
     },
     {
-      name: "Elena Rivas",
-      role: "Alumna Crossfit",
-      content: "Las instalaciones son de primer nivel. Bajé 8kg en 3 meses siguiendo el plan de los coaches.",
+      name: "Máximo Jimenez",
+      role: "Atleta de Musculación",
+      content: "Excelente ambiente para mejorar, siempre hay respeto dentro del gimnasio y un excelente punto es la limpieza ya que siempre están limpiando las máquinas y el lugar",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop"
     }
   ],

@@ -18,7 +18,14 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  type NavLink = {
+    name: string;
+    href: string;
+    id?: string;
+    isPage?: boolean;
+  };
+
+  const navLinks: NavLink[] = [
     { name: "Inicio", href: "/", id: "inicio" },
     { name: "Beneficios", href: "/", id: "beneficios" },
     { name: "Servicios", href: "/", id: "servicios" },
@@ -26,30 +33,32 @@ export const Navbar = () => {
     { name: "Contacto", href: "/contacto", isPage: true },
   ];
 
-  const handleNavigation = (link: any) => {
+  const handleNavigation = (link: NavLink) => {
     setIsOpen(false);
     if (link.isPage) {
       navigate(link.href);
-    } else {
-      if (location.pathname !== "/") {
-        navigate("/");
-        // Wait for navigation and then scroll
-        setTimeout(() => {
-          const el = document.getElementById(link.id);
-          if (el) {
-            const yOffset = -80;
-            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-          }
-        }, 100);
-      } else {
-        const el = document.getElementById(link.id);
+      return;
+    }
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation and then scroll
+      setTimeout(() => {
+        const el = link.id ? document.getElementById(link.id) : null;
         if (el) {
           const yOffset = -80;
           const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+          window.scrollTo({ top: y, behavior: "smooth" });
         }
-      }
+      }, 100);
+      return;
+    }
+
+    const el = link.id ? document.getElementById(link.id) : null;
+    if (el) {
+      const yOffset = -80;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -107,11 +116,11 @@ export const Navbar = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "100vh" }}
+            animate={{ opacity: 1, height: "calc(100vh - 72px)" }}
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden absolute top-full left-0 right-0 bg-brand-black border-t border-white/5 overflow-hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full gap-8 p-6">
+            <div className="flex flex-col items-center justify-center h-full gap-8 p-6 overflow-y-auto pb-24">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
@@ -121,7 +130,7 @@ export const Navbar = () => {
                   {link.name}
                 </button>
               ))}
-              <a 
+              <a
                 href={SITE_DATA.whatsapp}
                 className="w-full bg-brand-red text-white py-6 rounded-2xl font-black text-center text-xl uppercase tracking-widest"
               >

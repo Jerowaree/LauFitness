@@ -62,7 +62,7 @@ export const Contact = () => {
       
       // Auto-reset status after 5 seconds
       setTimeout(() => setStatus({ type: "idle", message: "" }), 5000);
-    } catch (error) {
+    } catch {
       setStatus({ type: "error", message: "Error en el servidor. Inténtalo más tarde." });
     }
   };
