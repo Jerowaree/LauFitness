@@ -15,8 +15,8 @@ export const SITE_DATA = {
     subtitle: "La experiencia de entrenamiento más exclusiva de Lima Norte. Forjamos atletas con equipamiento de élite y una comunidad enfocada en el alto rendimiento.",
     cta: "Comenzar Ahora",
     stats: [
-      { label: "Alumnos Activos", value: "+500" },
-      { label: "Coaches Certificados", value: "12" },
+      { label: "Alumnos Activos", value: "+800" },
+      { label: "Coaches Certificados", value: "+5" },
       { label: "Equipamiento Pro", value: "100%" }
     ]
   },
@@ -123,7 +123,7 @@ export const SITE_DATA = {
     { url: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop" }
   ],
   hours: [
-    { day: "Lunes - Viernes", time: "05:30 AM - 10:00 PM" },
-    { day: "Domingos y Feriados", time: "09:00 AM - 02:00 PM" }
+    { day: "Lunes - Viernes", time: "05:30 AM - 11:00 PM" },
+    { day: "Domingos y Feriados", time: "08:00 AM - 03:00 PM" }
   ]
 };
